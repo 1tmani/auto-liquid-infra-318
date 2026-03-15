@@ -1,1 +1,41 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>LIQUID INFRA | MASTER TEACHER</title><link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Michroma&display=swap' rel='stylesheet'><style>:root{--p:#00f2ff;--bg:#000;} body{background:#000;color:#fff;font-family:'Michroma';overflow:hidden;} canvas{position:fixed;inset:0;z-index:1;} .hud{position:fixed;top:40px;left:40px;z-index:100;border-left:2px solid var(--p);padding-left:20px;letter-spacing:5px;font-size:10px;}</style></head><body><div class='hud'>NODE: LIQUID_INFRA_V71<br>ROLE: MASTER_TEACHER<br>BROADCASTING: STABILITY_LOGIC</div><canvas id='c'></canvas><script>const canvas=document.getElementById('c'),ctx=canvas.getContext('2d');let w,h,t=0;function res(){{w=canvas.width=innerWidth;h=canvas.height=innerHeight;}}res();function draw(){{t+=0.01;ctx.fillStyle='rgba(0,0,0,0.15)';ctx.fillRect(0,0,w,h);ctx.strokeStyle='var(--p)';ctx.lineWidth=0.5;for(let i=0;i<10;i++){{ctx.beginPath();ctx.arc(w/2,h/2,50+i*25+Math.sin(t+i)*20,0,Math.PI*2);ctx.stroke();}} requestAnimationFrame(draw);}}draw();</script></body></html>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'><title>LIQUID INFRA | RED_SHIFT</title>
+<link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Michroma&display=swap' rel='stylesheet'>
+<style>
+:root{--p:#ff0044;--bg:#000;}
+body,html{ margin:0; background:#000; color:#fff; font-family:'Michroma'; overflow:hidden; }
+canvas{ position:fixed; inset:0; z-index:1; }
+.hud{ position:fixed; top:40px; left:40px; z-index:100; border-left:2px solid var(--p); padding-left:20px; letter-spacing:5px; font-size:10px; background:rgba(0,0,0,0.8); }
+.geometry-core{ position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:100vw; height:100vh; z-index:5; pointer-events:none; perspective:1200px; }
+.rect-box{ position:absolute; top:50%; left:50%; transform-style:preserve-3d; border:2px solid var(--p); box-shadow: 0 0 40px var(--p); animation: rotateBox linear infinite; }
+@keyframes rotateBox {
+    from{ transform: translate(-50%,-50%) rotateX(0deg) rotateY(0deg); }
+    to{ transform: translate(-50%,-50%) rotateX(360deg) rotateY(720deg); }
+}
+</style>
+</head>
+<body>
+<div class='hud'>NODE: LIQUID_INFRA_RED_V72<br>ROLE: MASTER_ORCHESTRATOR<br>STATUS: RECURSIVE_ANIMATION_ACTIVE</div>
+<canvas id='c'></canvas>
+<div class='geometry-core'>
+    <div class='rect-box' style='width:300px; height:300px; animation-duration:10s;'></div>
+    <div class='rect-box' style='width:200px; height:200px; animation-duration:15s; opacity:0.6;'></div>
+    <div class='rect-box' style='width:400px; height:100px; animation-duration:20s; opacity:0.3;'></div>
+</div>
+<script>
+const canvas=document.getElementById('c'),ctx=canvas.getContext('2d');
+let w,h,t=0; function res(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;}res();
+function draw(){
+    t+=0.02; ctx.fillStyle='rgba(0,0,0,0.15)'; ctx.fillRect(0,0,w,h);
+    ctx.strokeStyle='var(--p)'; ctx.lineWidth=0.5;
+    for(let i=0;i<12;i++){
+        ctx.beginPath();
+        let r = 50 + i*30 + Math.sin(t+i)*20;
+        ctx.arc(w/2,h/2,r,0,Math.PI*2);
+        ctx.stroke();
+    }
+    requestAnimationFrame(draw);
+}draw();
+</script></body></html>
